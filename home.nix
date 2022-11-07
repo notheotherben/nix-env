@@ -6,19 +6,21 @@
   home.username = "bpannell";
   home.homeDirectory = "/Users/bpannell";
   home.packages = [
+    #pkgs.azure-cli
+    #pkgs.firefox
     pkgs._1password
     pkgs._1password-gui
-    #pkgs.azure-cli
     pkgs.caddy
     pkgs.dotnet-sdk
-    #pkgs.firefox
     pkgs.git
+    pkgs.gitoxide
     pkgs.go
     pkgs.httpie
     pkgs.jq
     pkgs.nmap
     pkgs.nodejs
     pkgs.nomad
+    pkgs.powershell
     pkgs.protobuf
     pkgs.rustup
     pkgs.shellcheck
@@ -29,6 +31,15 @@
     pkgs.vault
     pkgs.vim
     pkgs.vscode
+    pkgs.vscode-extensions.eamodio.gitlens
+    pkgs.vscode-extensions.editorconfig.editorconfig
+    pkgs.vscode-extensions.github.copilot
+    pkgs.vscode-extensions.golang.go
+    pkgs.vscode-extensions.hashicorp.terraform
+    pkgs.vscode-extensions.matklad.rust-analyzer
+    pkgs.vscode-extensions.ms-dotnettools.csharp
+    pkgs.vscode-extensions.ms-python.vscode-pylance
+    pkgs.vscode-extensions.redhat.vscode-yaml
   ];
 
   home.stateVersion = "22.05";
