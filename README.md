@@ -6,13 +6,11 @@ development environments on my personal machines.
 To use this configuration, you'll need to install [Nix](https://nixos.org/nix/) and then run the following commands:
 
 ```bash
-export NIXPKGS_ALLOW_UNFREE=1
-
 # Install the activation package
-nix build --no-link 'github:notheotherben/nix-env#homeConfigurations.bpannell.activationPackage' --impure
+nix build --no-link 'github:notheotherben/nix-env#homeConfigurations.bpannell.activationPackage'
 
 # Activate the configuration
-"$(nix path-info 'github:notheotherben/nix-env#homeConfigurations.bpannell.activationPackage' --impure)"/activate
+"$(nix path-info 'github:notheotherben/nix-env#homeConfigurations.bpannell.activationPackage')"/activate
 ```
 
 In future, if you wish to update your configuration, you can run the following commands:
@@ -20,6 +18,5 @@ In future, if you wish to update your configuration, you can run the following c
 ```bash
 nix flake update 'github:notheotherben/nix-env'
 
-export NIXPKGS_ALLOW_UNFREE=1
-home-manager switch --flake 'github:notheotherben/nix-env#bpannell' --impure
+home-manager switch --flake 'github:notheotherben/nix-env#bpannell'
 ```
