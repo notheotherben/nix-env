@@ -10,6 +10,7 @@
     #pkgs.firefox
     pkgs._1password
     pkgs._1password-gui
+    pkgs.cachix
     pkgs.caddy
     pkgs.cargo
     pkgs.dotnet-sdk
@@ -90,8 +91,17 @@
     enable = true;
 
     enableCompletion = true;
-    envExtra = "export GITTOOL_CONFIG=\"$HOME/dev/git-tool.yml\"";
-    initExtra = "eval \"$(starship init zsh)\"\neval \"$(git-tool shell-init zsh)\"";
+    defaultKeymap = "emacs";
+
+    envExtra = ''
+    export GITTOOL_CONFIG="$HOME/dev/git-tool.yml"
+    '';
+
+    initExtra = ''
+    eval "$(starship init zsh)"
+    eval "$(git-tool shell-init zsh)
+    '';
+
     shellAliases = {
       "gt" = "git-tool";
     };
