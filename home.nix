@@ -93,7 +93,7 @@
 
     initExtra = ''
     eval "$(starship init zsh)"
-    eval "$(git-tool shell-init zsh)
+    eval "$(git-tool shell-init zsh)"
     '';
 
     shellAliases = {
