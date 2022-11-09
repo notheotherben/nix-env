@@ -8,8 +8,8 @@
   home.packages = [
     #pkgs.azure-cli
     #pkgs.firefox
+    #pkgs._1password-gui
     pkgs._1password
-    pkgs._1password-gui
     pkgs.cachix
     pkgs.caddy
     pkgs.cargo
