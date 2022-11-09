@@ -14,7 +14,6 @@
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
-      nixpkgs.config.allowUnfree = true;
     in {
       homeConfigurations.bpannell = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
