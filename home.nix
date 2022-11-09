@@ -1,14 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-
-  home.username = "bpannell";
-  home.homeDirectory = "/Users/bpannell";
   home.packages = [
+    #pkgs._1password-gui
     #pkgs.azure-cli
     #pkgs.firefox
-    #pkgs._1password-gui
+    #pkgs.httpie
     pkgs._1password
     pkgs.cachix
     pkgs.caddy
@@ -17,7 +14,6 @@
     pkgs.git
     pkgs.gitoxide
     pkgs.go
-    pkgs.httpie
     pkgs.jq
     pkgs.nmap
     pkgs.nodejs
@@ -39,12 +35,10 @@
     pkgs.vscode-extensions.golang.go
     pkgs.vscode-extensions.hashicorp.terraform
     pkgs.vscode-extensions.matklad.rust-analyzer
-    pkgs.vscode-extensions.ms-dotnettools.csharp
+    #pkgs.vscode-extensions.ms-dotnettools.csharp
     pkgs.vscode-extensions.ms-python.vscode-pylance
     pkgs.vscode-extensions.redhat.vscode-yaml
   ];
-
-  home.stateVersion = "22.05";
 
   programs.home-manager.enable = true;
 
