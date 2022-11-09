@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, specialArgs, ... }:
 
 {
   home.packages = [
@@ -38,7 +38,7 @@
     #pkgs.vscode-extensions.ms-dotnettools.csharp
     pkgs.vscode-extensions.ms-python.vscode-pylance
     pkgs.vscode-extensions.redhat.vscode-yaml
-  ];
+  ] ++ specialArgs.extraPackages;
 
   programs.home-manager.enable = true;
 

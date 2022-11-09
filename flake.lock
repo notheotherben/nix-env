@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "grey": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1668033285,
+        "narHash": "sha256-L0+QazE1ksJ7z7JEDH9OZniHJu05hRT99eWpkeKX0v0=",
+        "owner": "SierraSoftworks",
+        "repo": "grey",
+        "rev": "a93a1ea0c15e9ab4f0d362f80ff8829b62f30377",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SierraSoftworks",
+        "repo": "grey",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -39,6 +59,7 @@
     },
     "root": {
       "inputs": {
+        "grey": "grey",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
