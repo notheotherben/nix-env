@@ -9,7 +9,6 @@
     pkgs._1password
     pkgs.cachix
     pkgs.caddy
-    pkgs.cargo
     pkgs.dotnet-sdk
     pkgs.git
     pkgs.gitoxide
@@ -20,7 +19,7 @@
     pkgs.nomad
     pkgs.powershell
     pkgs.protobuf
-    pkgs.rustc
+    pkgs.rustup
     pkgs.shellcheck
     pkgs.speedtest-cli
     pkgs.starship
