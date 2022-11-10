@@ -8,13 +8,17 @@
       url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    git-tool = {
+        url = "github:SierraSoftworks/git-tool";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
     grey = {
         url = "github:SierraSoftworks/grey";
         inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, grey, ... }:
+  outputs = { nixpkgs, home-manager, git-tool, grey, ... }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system} // {
@@ -38,6 +42,7 @@
         extraSpecialArgs = {
             extraPackages = [
                 grey.packages.${system}.default
+                git-tool.packages.${system}.default
             ];
         };
       };
