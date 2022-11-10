@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1668090650,
-        "narHash": "sha256-+2fWCFeYE/ebCM13YOPtYExDpA5BbamlxSBiCGjeLMY=",
+        "lastModified": 1668092386,
+        "narHash": "sha256-kbQr5ZJWf9HzG+CCEJZxAQL3iSYNuwk+dUO7BtBt7Wk=",
         "owner": "SierraSoftworks",
         "repo": "git-tool",
-        "rev": "f5ded2b59e7442745a6ab2f2e58903e305cd2255",
+        "rev": "49a58a981d0603de734234fd9366495fb0c59221",
         "type": "github"
       },
       "original": {
@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1668033285,
-        "narHash": "sha256-L0+QazE1ksJ7z7JEDH9OZniHJu05hRT99eWpkeKX0v0=",
+        "lastModified": 1668034012,
+        "narHash": "sha256-8thn1CjniOUXjPS1EUbyP3DqI11/mQ1OZNm+rGpg7HI=",
         "owner": "SierraSoftworks",
         "repo": "grey",
-        "rev": "a93a1ea0c15e9ab4f0d362f80ff8829b62f30377",
+        "rev": "8a4e6dc23b537454e00cc49382a6823fcd304dff",
         "type": "github"
       },
       "original": {
@@ -63,11 +63,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1667921968,
-        "narHash": "sha256-EI+//LbhUzX471LHq8GgB+oUHpdA2rsiXpY1q5tDYGw=",
+        "lastModified": 1668016843,
+        "narHash": "sha256-ioBuF+IAhmJO7s4ewEij1LkMxJvCCNCKXxMto/DU02I=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "df2bcbbd1c2aa144261cf1b0003c889c075dc693",
+        "rev": "fa842715565307b7e05cdb187b08c05f16ed08f1",
         "type": "github"
       },
       "original": {
