@@ -18,5 +18,8 @@ In future, if you wish to update your configuration, you can run the following c
 ```bash
 nix flake update 'github:notheotherben/nix-env'
 
+# Build the flake using concurrent builders
+nix build --no-link 'github:notheotherben/nix-env#homeConfigurations.bpannell.activationPackage' -j auto
+
 home-manager switch --flake 'github:notheotherben/nix-env#bpannell'
 ```
