@@ -19,15 +19,19 @@
     pkgs.git
     pkgs.gitoxide
     pkgs.go
+    pkgs.jupyter
     pkgs.jq
     pkgs.nmap
     pkgs.nodejs
-    pkgs.nomad
+    pkgs.nomad_1_4
     pkgs.powershell
     pkgs.protobuf
     pkgs.python310Full
     pkgs.python310Packages.httpie
+    pkgs.python310Packages.numpy
+    pkgs.python310Packages.pandas
     pkgs.python310Packages.pip
+    pkgs.python310Packages.torch-bin
     pkgs.rustup
     pkgs.shellcheck
     pkgs.speedtest-cli
