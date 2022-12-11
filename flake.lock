@@ -96,11 +96,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1669015376,
-        "narHash": "sha256-ARholgkF5mprCd503p27ouSVsLHVEe36odtTVjoU1yk=",
+        "lastModified": 1670570597,
+        "narHash": "sha256-21EPNwnm1Qte/PPBWKon7+Aoj4zIwrVwXUwRm9HQcBU=",
         "owner": "SierraSoftworks",
         "repo": "git-tool",
-        "rev": "3c65469af87ba39f8530a5c9c2bb35c50ffae9e2",
+        "rev": "a4082af31871313288b723a40352fc07cf0bc017",
         "type": "github"
       },
       "original": {
