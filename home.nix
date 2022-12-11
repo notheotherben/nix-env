@@ -36,16 +36,6 @@
     pkgs.terraform
     pkgs.vault
     pkgs.vim
-    pkgs.vscode
-    pkgs.vscode-extensions.eamodio.gitlens
-    pkgs.vscode-extensions.editorconfig.editorconfig
-    pkgs.vscode-extensions.github.copilot
-    pkgs.vscode-extensions.golang.go
-    pkgs.vscode-extensions.hashicorp.terraform
-    pkgs.vscode-extensions.matklad.rust-analyzer
-    #pkgs.vscode-extensions.ms-dotnettools.csharp
-    pkgs.vscode-extensions.ms-python.vscode-pylance
-    pkgs.vscode-extensions.redhat.vscode-yaml
   ] ++ specialArgs.extraPackages;
 
   programs.home-manager.enable = true;
