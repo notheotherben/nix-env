@@ -1,11 +1,17 @@
 { config, pkgs, specialArgs, ... }:
 
 {
+  home.username = specialArgs.username;
+  home.homeDirectory = "/Users/${specialArgs.username}";
+
+  home.stateVersion = specialArgs.stateVersion;
+
+  #pkgs.config.allowUnfree = true;
+
   home.packages = [
     #pkgs._1password-gui
     #pkgs.azure-cli
     #pkgs.firefox
-    #pkgs.httpie
     pkgs._1password
     pkgs.cachix
     pkgs.caddy
@@ -19,6 +25,9 @@
     pkgs.nomad
     pkgs.powershell
     pkgs.protobuf
+    pkgs.python310Full
+    pkgs.python310Packages.httpie
+    pkgs.python310Packages.pip
     pkgs.rustup
     pkgs.shellcheck
     pkgs.speedtest-cli

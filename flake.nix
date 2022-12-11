@@ -3,9 +3,9 @@
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
     home-manager = {
-      url = "github:nix-community/home-manager/release-22.05";
+      url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     git-tool = {
@@ -27,23 +27,19 @@
       username = "bpannell";
     in {
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs system username;
+        inherit pkgs;
 
-        configuration = {
-            nixpkgs.config.allowUnfree = true;
-        };
-
-        homeDirectory = "/Users/${username}";
-
-        stateVersion = "22.05";
-
-        extraModules = [ ./home.nix ];
+        modules = [
+          ./home.nix
+        ];
 
         extraSpecialArgs = {
-            extraPackages = [
-                grey.packages.${system}.default
-                git-tool.packages.${system}.default
-            ];
+          username = username;
+          stateVersion = "22.11";
+          extraPackages = [
+              grey.packages.${system}.default
+              git-tool.packages.${system}.default
+          ];
         };
       };
     };
