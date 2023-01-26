@@ -13,6 +13,7 @@
     #pkgs.azure-cli
     #pkgs.firefox
     pkgs._1password
+    pkgs.android-tools
     pkgs.cachix
     pkgs.caddy
     pkgs.dotnet-sdk
