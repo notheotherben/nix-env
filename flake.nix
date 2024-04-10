@@ -1,11 +1,11 @@
 {
-  description = "Home Manager configuration for Benjamin Pannell";
+  description = "Darwin configuration for Benjamin Pannell";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
-    home-manager = {
-      url = "github:nix-community/home-manager/release-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     git-tool = {
@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, git-tool, grey, ... }:
+  outputs = inputs@{ nixpkgs, nix-darwin, git-tool, grey, ... }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system} // {
@@ -26,16 +26,15 @@
       };
       username = "bpannell";
     in {
-      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+      darwinConfigurations.sierra-mbp = nix-darwin.lib.darwinSystem {
         inherit pkgs;
 
         modules = [
-          ./home.nix
+          ./configuration.nix
         ];
 
-        extraSpecialArgs = {
-          username = username;
-          stateVersion = "22.11";
+        specialArgs = {
+          system = system;
           extraPackages = [
               grey.packages.${system}.default
               git-tool.packages.${system}.default
