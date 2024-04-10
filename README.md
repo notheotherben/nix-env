@@ -19,7 +19,7 @@ nix build --no-link 'github:notheotherben/nix-env#homeConfigurations.sierra-mbp.
 In future, if you wish to update your configuration, you can run the following commands:
 
 ```bash
-nix flake update 'github:notheotherben/nix-env'
+nix flake update --flake 'github:notheotherben/nix-env'
 
 nix run nix-darwin -- switch --flake github:notheotherben/nix-env
 
