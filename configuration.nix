@@ -121,7 +121,8 @@ self@{ config, pkgs, lib, inputs, ... }:
     vim
   ] ++ inputs.extraPackages;
 
-
+  programs.direnv.enable = true;
+  
   programs.zsh = {
     enable = true;
 
