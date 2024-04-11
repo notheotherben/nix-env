@@ -79,6 +79,7 @@ self@{ config, pkgs, lib, inputs, ... }:
 
   environment.shellAliases = {
     "gt" = "git-tool";
+    "http" = "xh";
   };
 
   environment.systemPackages = with pkgs; [
@@ -109,7 +110,6 @@ self@{ config, pkgs, lib, inputs, ... }:
     powershell
     protobuf
     python312Full
-    python312Packages.httpie
     python312Packages.pip
     rustup
     shellcheck
@@ -119,6 +119,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     terraform
     vault
     vim
+    xh
   ] ++ inputs.extraPackages;
 
   programs.direnv.enable = true;
