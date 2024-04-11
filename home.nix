@@ -3,6 +3,7 @@
 {
   home.username = specialArgs.username;
   home.homeDirectory = "/Users/${specialArgs.username}";
+  home.stateVersion = specialArgs.stateVersion;
 
   programs.git = {
     enable = true;
@@ -45,5 +46,5 @@
 
   programs.zsh = {
     defaultKeymap = "emacs";
-  }
+  };
 }
