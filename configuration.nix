@@ -104,14 +104,13 @@ self@{ config, pkgs, lib, inputs, ... }:
     gocode-gomod
     godef
     golint
-    httpie
     jq
     nomad
     powershell
     protobuf
     python312Full
-    #python312Packages.httpie
-    #python312Packages.pip
+    python312Packages.httpie
+    python312Packages.pip
     rustup
     shellcheck
     speedtest-cli
@@ -141,4 +140,5 @@ self@{ config, pkgs, lib, inputs, ... }:
   services.lorri.enable = true;
 
   services.tailscale.enable = true;
+  services.tailscale.package = pkgs.tailscale;
 }
