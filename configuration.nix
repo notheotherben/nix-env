@@ -137,4 +137,8 @@ self@{ config, pkgs, lib, inputs, ... }:
       eval "$(git-tool shell-init zsh)"
     '';
   };
+
+  services.lorri.enable = true;
+
+  services.tailscale.enable = true;
 }
