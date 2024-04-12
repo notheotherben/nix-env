@@ -87,6 +87,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     #azure-cli
     #firefox
     _1password
+    ansible
     ansible-language-server
     android-tools
     atuin
@@ -106,6 +107,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     godef
     golint
     jq
+    nil
     nomad
     powershell
     protobuf
