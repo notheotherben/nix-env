@@ -89,6 +89,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     _1password
     ansible
     ansible-language-server
+    ansible-lint
     android-tools
     atuin
     bfg-repo-cleaner
@@ -140,8 +141,6 @@ self@{ config, pkgs, lib, inputs, ... }:
       eval "$(git-tool shell-init zsh)"
     '';
   };
-
-  services.lorri.enable = true;
 
   services.tailscale.enable = true;
   services.tailscale.package = pkgs.tailscale;
