@@ -80,6 +80,7 @@ self@{ config, pkgs, lib, inputs, ... }:
   environment.shellAliases = {
     "gt" = "git-tool";
     "http" = "xh";
+    "direnv-init" = "nix flake new -t github:nix-community/nix-direnv";
   };
 
   environment.systemPackages = with pkgs; [
