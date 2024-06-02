@@ -75,6 +75,8 @@ self@{ config, pkgs, lib, inputs, ... }:
   environment.variables = {
     "VAULT_ADDR" = "https://vault.sierrasoftworks.com";
     "VAULT_SSH_ROLE" = "admin";
+
+    "NOMAD_ADDR" = "https://trailhead.sierrasoftworks.com";
   };
 
   environment.shellAliases = {
