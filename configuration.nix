@@ -99,7 +99,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     caddy
     deno
     docker
-    dotnet-sdk
+    dotnet-sdk_8
     git
     gitoxide
     go
@@ -112,7 +112,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     golint
     jq
     nil
-    nomad
+    nomad_1_8
     powershell
     protobuf
     python312Full

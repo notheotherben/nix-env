@@ -1,8 +1,8 @@
-{ config, pkgs, specialArgs, ... }:
+{ config, pkgs, lib, specialArgs, ... }:
 
 {
   home.username = specialArgs.username;
-  home.homeDirectory = "/Users/${specialArgs.username}";
+  home.homeDirectory = lib.mkForce "/Users/${specialArgs.username}";
   home.stateVersion = specialArgs.stateVersion;
 
   programs.git = {

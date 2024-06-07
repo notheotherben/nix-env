@@ -2,6 +2,10 @@
 My personal [Nix](https://nixos.org) home-manager configuration, used to bootstrap
 development environments on my personal machines.
 
+```bash
+darwin-rebuild switch --flake .#
+```
+
 ## Usage
 To use this configuration, you'll need to install [Nix](https://nixos.org/nix/) and then run the following commands:
 

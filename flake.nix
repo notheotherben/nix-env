@@ -33,6 +33,18 @@
       darwinConfigurations.sierra-mbp = nix-darwin.lib.darwinSystem {
         modules = [
           ./configuration.nix
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${username} = import ./home.nix;
+
+            home-manager.extraSpecialArgs = {
+              username = username;
+              stateVersion = "23.11";
+            };
+          }
         ];
 
         inputs = {
