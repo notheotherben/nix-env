@@ -111,6 +111,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     godef
     golint
     jq
+    jre8
     nil
     nomad_1_8
     powershell
