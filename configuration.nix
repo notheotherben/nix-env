@@ -97,6 +97,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     atuin
     bfg-repo-cleaner
     caddy
+    cargo-binstall
     deno
     docker
     dotnet-sdk_8
