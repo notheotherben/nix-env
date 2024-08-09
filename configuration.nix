@@ -77,6 +77,8 @@ self@{ config, pkgs, lib, inputs, ... }:
     "VAULT_SSH_ROLE" = "admin";
 
     "NOMAD_ADDR" = "https://trailhead.sierrasoftworks.com";
+
+    "ATUIN_SYNC_ADDRESS" = "http://nas.raptor-perch.ts.net:8888";
   };
 
   environment.shellAliases = {
