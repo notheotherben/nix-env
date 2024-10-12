@@ -78,7 +78,7 @@ self@{ config, pkgs, lib, inputs, ... }:
 
     "NOMAD_ADDR" = "https://trailhead.sierrasoftworks.com";
 
-    "ATUIN_SYNC_ADDRESS" = "http://nas.raptor-perch.ts.net:8888";
+    "ATUIN_SYNC_ADDRESS" = "https://atuin.raptor-perch.ts.net";
   };
 
   environment.shellAliases = {
@@ -89,7 +89,7 @@ self@{ config, pkgs, lib, inputs, ... }:
 
   environment.systemPackages = with pkgs; [
     #_1password-gui
-    #azure-cli
+    azure-cli
     #firefox
     _1password
     ansible
@@ -113,6 +113,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     gocode-gomod
     godef
     golint
+    grpcurl
     jq
     openjdk
     nil
