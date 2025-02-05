@@ -29,8 +29,12 @@ self@{ config, pkgs, lib, inputs, ... }:
   nixpkgs.config.allowUnfree = true;
 
   # Enable automatic GC and optimization of nix store
-  nix.gc.automatic = true;
   nix.optimise.automatic = true;
+  nix.gc = {
+    automatic = true;
+    interval = { Weekday = 0; Hour = 0; Minute = 0; };
+    options = "--delete-older-than 15d";
+  };
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -97,7 +101,6 @@ self@{ config, pkgs, lib, inputs, ... }:
     ansible-lint
     android-tools
     atuin
-    bfg-repo-cleaner
     caddy
     cargo-binstall
     deno
@@ -117,7 +120,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     jq
     openjdk
     nil
-    nomad_1_8
+    nixd
     powershell
     protobuf
     python312Full
@@ -126,8 +129,8 @@ self@{ config, pkgs, lib, inputs, ... }:
     shellcheck
     speedtest-cli
     starship
-    tailscale
     terraform
+    uv
     vault
     vim
     xh
