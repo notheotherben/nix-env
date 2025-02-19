@@ -14,6 +14,8 @@ self@{ config, pkgs, lib, inputs, ... }:
     "@admin"
   ];
 
+  ids.gids.nixbld = 350;
+
   # Enable experimental nix command and flakes
   # nix.package = pkgs.nixUnstable;
   nix.extraOptions = ''
