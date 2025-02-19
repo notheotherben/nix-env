@@ -1,8 +1,7 @@
 self@{ config, pkgs, lib, inputs, ... }:
 
 {
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  nix.enable = true;
   # nix.package = pkgs.nixUnstable;
 
   nix.settings.substituters = [
@@ -14,7 +13,6 @@ self@{ config, pkgs, lib, inputs, ... }:
   nix.settings.trusted-users = [
     "@admin"
   ];
-  nix.configureBuildUsers = true;
 
   # Enable experimental nix command and flakes
   # nix.package = pkgs.nixUnstable;
@@ -80,8 +78,6 @@ self@{ config, pkgs, lib, inputs, ... }:
     "VAULT_ADDR" = "https://vault.sierrasoftworks.com";
     "VAULT_SSH_ROLE" = "admin";
 
-    "NOMAD_ADDR" = "https://trailhead.sierrasoftworks.com";
-
     "ATUIN_SYNC_ADDRESS" = "https://atuin.raptor-perch.ts.net";
   };
 
@@ -95,7 +91,7 @@ self@{ config, pkgs, lib, inputs, ... }:
     #_1password-gui
     azure-cli
     #firefox
-    _1password
+    _1password-cli
     ansible
     ansible-language-server
     ansible-lint
