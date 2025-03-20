@@ -24,7 +24,7 @@ self@{ config, pkgs, lib, inputs, ... }:
   '' + lib.optionalString (pkgs.system == "aarch64-darwin") ''
     extra-platforms = x86_64-darwin aarch64-darwin
   '';
-  
+
   # Allow closed source packages
   nixpkgs.config.allowUnfree = true;
 
@@ -46,7 +46,7 @@ self@{ config, pkgs, lib, inputs, ... }:
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = inputs.system;
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
   security.pki.certificates = [''
   -----BEGIN CERTIFICATE-----
   MIIDajCCAlKgAwIBAgIUBcvhyQMulV+3D7VJH7IYSQZ1pAwwDQYJKoZIhvcNAQEL
@@ -91,7 +91,7 @@ self@{ config, pkgs, lib, inputs, ... }:
 
   environment.systemPackages = with pkgs; [
     #_1password-gui
-    azure-cli
+    #azure-cli
     #firefox
     _1password-cli
     ansible
@@ -116,9 +116,10 @@ self@{ config, pkgs, lib, inputs, ... }:
     golint
     grpcurl
     jq
-    openjdk
     nil
     nixd
+    nodejs
+    openjdk
     powershell
     protobuf
     python312Full
@@ -135,7 +136,7 @@ self@{ config, pkgs, lib, inputs, ... }:
   ] ++ inputs.extraPackages;
 
   programs.direnv.enable = true;
-  
+
   programs.zsh = {
     enable = true;
 
@@ -144,7 +145,7 @@ self@{ config, pkgs, lib, inputs, ... }:
 
     interactiveShellInit = ''
       export GITTOOL_CONFIG="$HOME/dev/git-tool.yml"
-    
+
       eval "$(atuin init zsh)"
       eval "$(starship init zsh)"
       eval "$(git-tool shell-init zsh)"
