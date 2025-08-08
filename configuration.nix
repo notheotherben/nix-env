@@ -43,6 +43,9 @@ self@{ config, pkgs, lib, inputs, ... }:
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  # Set the username for the primary user of the system.
+  system.primaryUser = inputs.username;
+
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = inputs.system;
 
