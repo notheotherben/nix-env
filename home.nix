@@ -26,21 +26,21 @@
   programs.starship = {
     enable = true;
     settings = {
-      format = "\n[](fg:#1C4961)[$directory](bg:#1C4961)[](fg:#1C4961 bg:#2F79A1)$git_branch[](fg:#2F79A1 bg:#3A95C7)$git_status[](#3A95C7 bg:#40A9E0)$time[](#40A9E0 bg:none) $all$character ";
+      format = "\n[](fg:#7287fd)[$directory](bg:#7287fd)[](fg:#7287fd bg:#313244)$git_branch[](fg:#313244 bg:#45475a)$git_status[](#45475a bg:#585b70)$time[](fg:#585b70 bg:none) $all$character ";
 
       add_newline = true;
 
-      directory.style = "bg:#1C4961 fg:white";
+      directory.style = "bg:#7287fd fg:#ffffff";
 
       git_branch.format = "[ $symbol$branch ]($style)";
-      git_branch.style = "bg:#2F79A1 fg:white";
+      git_branch.style = "bg:#313244 fg:#ffffff";
 
       git_status.format = "[ $all_status$ahead_behind ]($style)";
-      git_status.style = "bg:#3A95C7 fg:white";
+      git_status.style = "bg:#45475a fg:#ffffff";
 
       time.disabled = false;
       time.format = "[ $time ]($style)";
-      time.style = "bg:#40A9E0 fg:white";
+      time.style = "bg:#585b70 fg:#ffffff";
     };
   };
 
