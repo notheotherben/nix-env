@@ -94,7 +94,7 @@ self@{ config, pkgs, lib, inputs, ... }:
 
   environment.systemPackages = with pkgs; [
     #_1password-gui
-    #azure-cli
+    azure-cli
     #firefox
     _1password-cli
     ansible
