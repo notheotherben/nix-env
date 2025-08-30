@@ -4,7 +4,7 @@ My personal [Nix](https://nixos.org) home-manager configuration, used to bootstr
 development environments on my personal machines.
 
 ```bash
-darwin-rebuild switch --flake .#
+sudo darwin-rebuild switch --flake .#
 ```
 
 ## Usage
