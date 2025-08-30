@@ -105,6 +105,7 @@ self@{ _config, pkgs, lib, inputs, ... }:
     caddy
     cargo-binstall
     deno
+    direnv
     docker
     dotnet-sdk_8
     git
