@@ -4,14 +4,14 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
+      url = "github:nixos/nixpkgs/nixos-25.05";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-darwin = {
-      url = "github:LnL7/nix-darwin";
+      url = "github:LnL7/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     git-tool = {
@@ -42,7 +42,7 @@
 
             home-manager.extraSpecialArgs = {
               username = username;
-              stateVersion = "23.11";
+              stateVersion = "25.05";
             };
           }
         ];
@@ -65,7 +65,7 @@
 
         extraSpecialArgs = {
           username = username;
-          stateVersion = "23.11";
+          stateVersion = "25.05";
         };
       };
     };
