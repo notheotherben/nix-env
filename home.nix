@@ -1,4 +1,4 @@
-{ config, pkgs, lib, specialArgs, ... }:
+{ _config, _pkgs, lib, specialArgs, ... }:
 
 {
   home.username = specialArgs.username;

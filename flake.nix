@@ -18,13 +18,22 @@
         url = "github:SierraSoftworks/git-tool";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-    grey = {
-        url = "github:SierraSoftworks/grey";
-        inputs.nixpkgs.follows = "nixpkgs";
+    # grey = {
+    #     url = "github:SierraSoftworks/grey";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    somo = {
+      url = "github:theopfr/somo?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nix-darwin, git-tool, grey, ... }:
+  outputs = inputs@{
+    nixpkgs,
+    home-manager,
+    nix-darwin,
+    ...
+  }:
     let
       system = "aarch64-darwin";
       username = "bpannell";
@@ -51,8 +60,9 @@
           username = username;
           system = system;
           extraPackages = [
-              grey.packages.${system}.default
-              git-tool.packages.${system}.default
+              # inputs.grey.packages.${system}.default
+              inputs.git-tool.packages.${system}.default
+              inputs.somo.outputs.packages.${system}.default
           ];
         };
       };
