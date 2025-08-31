@@ -5,6 +5,10 @@
   home.homeDirectory = lib.mkForce "/Users/${specialArgs.username}";
   home.stateVersion = specialArgs.stateVersion;
 
+  home.shellAliases = {
+    "gt" = "git-tool";
+  };
+
   programs.git = {
     enable = true;
 
@@ -45,6 +49,16 @@
   };
 
   programs.zsh = {
+    enable = false;
     defaultKeymap = "emacs";
+  };
+
+  programs.fish = {
+    enable = true;
+
+    interactiveShellInit = ''
+      export GITTOOL_CONFIG="$HOME/dev/git-tool.yml"
+      complete -f -c git-tool -a "(git-tool complete (commandline -cp))"
+    '';
   };
 }

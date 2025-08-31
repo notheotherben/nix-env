@@ -140,6 +140,14 @@ self@{ _config, pkgs, lib, inputs, ... }:
   ] ++ inputs.extraPackages;
 
   programs.direnv.enable = true;
+  programs.fish = {
+    enable = true;
+
+    interactiveShellInit = ''
+      eval "$(atuin init fish)"
+      eval "$(starship init fish)"
+    '';
+  };
 
   programs.zsh = {
     enable = true;
@@ -158,4 +166,10 @@ self@{ _config, pkgs, lib, inputs, ... }:
 
   services.tailscale.enable = true;
   services.tailscale.package = pkgs.tailscale;
+
+  users.knownUsers = [ inputs.username ];
+  users.users.${inputs.username} = {
+    uid = 501;
+    shell = pkgs.fish;
+  };
 }
