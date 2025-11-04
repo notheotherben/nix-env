@@ -143,6 +143,11 @@ self@{ _config, pkgs, lib, inputs, ... }:
   programs.fish = {
     enable = true;
 
+    shellInit = ''
+      fish_add_path -a ~/go/bin
+      fish_add_path -a ~/.cargo/bin
+    '';
+
     interactiveShellInit = ''
       eval "$(atuin init fish)"
       eval "$(starship init fish)"
