@@ -59,11 +59,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761290859,
-        "narHash": "sha256-4s4ckxUc7r2OuwtJx1JbAKGiQzmep3UVMcEGZPHqczg=",
+        "lastModified": 1763708701,
+        "narHash": "sha256-Rj1QiItRypgrlhbyQfpzCut2uZc/8/NwvhHCXi4/vRA=",
         "owner": "SierraSoftworks",
         "repo": "git-tool",
-        "rev": "1c1a11e91c7280e3245bd52afbe6ce8128262e09",
+        "rev": "dbf39786d1b0727bd94d347fd9d8bab80aa7f1c4",
         "type": "github"
       },
       "original": {
@@ -100,11 +100,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759509947,
-        "narHash": "sha256-4XifSIHfpJKcCf5bZZRhj8C4aCpjNBaE3kXr02s4rHU=",
+        "lastModified": 1762912391,
+        "narHash": "sha256-4hpBE7bGd24SfD28rzMdUGXsLsNEYxCCrTipFdoqoNM=",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "000eadb231812ad6ea6aebd7526974aaf4e79355",
+        "rev": "d76299b2cd01837c4c271a7b5186e3d5d8ebd126",
         "type": "github"
       },
       "original": {
@@ -116,11 +116,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1761173472,
-        "narHash": "sha256-m9W0dYXflzeGgKNravKJvTMR4Qqa2MVD11AwlGMufeE=",
+        "lastModified": 1763622513,
+        "narHash": "sha256-1jQnuyu82FpiSxowrF/iFK6Toh9BYprfDqfs4BB+19M=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c8aa8cc00a5cb57fada0851a038d35c08a36a2bb",
+        "rev": "c58bc7f5459328e4afac201c5c4feb7c818d604b",
         "type": "github"
       },
       "original": {
@@ -135,30 +135,7 @@
         "git-tool": "git-tool",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs",
-        "somo": "somo"
-      }
-    },
-    "somo": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "nix",
-        "lastModified": 1760978964,
-        "narHash": "sha256-JO5DLi+hj4fKO4/vztglIBNXvof8ZQuIQDVjLJ+19Pc=",
-        "owner": "theopfr",
-        "repo": "somo",
-        "rev": "1c9a1c8597a3bb634ebf3d529991e2e9438fc867",
-        "type": "github"
-      },
-      "original": {
-        "dir": "nix",
-        "owner": "theopfr",
-        "repo": "somo",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {

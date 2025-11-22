@@ -22,10 +22,10 @@
     #     url = "github:SierraSoftworks/grey";
     #     inputs.nixpkgs.follows = "nixpkgs";
     # };
-    somo = {
-      url = "github:theopfr/somo?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # somo = {
+    #   url = "github:theopfr/somo?dir=nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = inputs@{
@@ -60,9 +60,9 @@
           username = username;
           system = system;
           extraPackages = [
-              # inputs.grey.packages.${system}.default
               inputs.git-tool.packages.${system}.default
-              inputs.somo.outputs.packages.${system}.default
+              # inputs.grey.packages.${system}.default
+              # inputs.somo.outputs.packages.${system}.default
           ];
         };
       };

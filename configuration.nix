@@ -99,7 +99,6 @@ self@{ _config, pkgs, lib, inputs, ... }:
     _1password-cli
     ansible
     ansible-language-server
-    ansible-lint
     android-tools
     atuin
     caddy
