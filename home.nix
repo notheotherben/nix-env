@@ -12,14 +12,16 @@
   programs.git = {
     enable = true;
 
-    userName = "Benjamin Pannell";
-    userEmail = "benjamin@pannell.dev";
-
-    extraConfig = {
+    settings = {
       pull.rebase = true;
       init.defaultBranch = "main";
 
-      user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILps0qzyssGwA6UyIxBOgHg1RhA92zlY4GKdASmERLUl";
+      user = {
+        name = "Benjamin Pannell";
+        email = "benjamin@pannell.dev";
+        signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILps0qzyssGwA6UyIxBOgHg1RhA92zlY4GKdASmERLUl";
+      };
+
       commit.gpgsign = true;
 
       gpg.format = "ssh";

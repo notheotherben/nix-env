@@ -98,7 +98,6 @@ self@{ _config, pkgs, lib, inputs, ... }:
     #firefox
     _1password-cli
     ansible
-    ansible-language-server
     android-tools
     atuin
     caddy
@@ -125,8 +124,8 @@ self@{ _config, pkgs, lib, inputs, ... }:
     openjdk
     powershell
     protobuf
-    python312Full
-    python312Packages.pip
+    python313
+    python313Packages.pip
     rustup
     shellcheck
     speedtest-cli
